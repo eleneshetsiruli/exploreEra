@@ -1,5 +1,5 @@
-import React from "react";
 import vectorImage from "../styled-components/homePage/homePngs/Vector.png";
+import { Discover } from "../components/Discover";
 
 import {
   Header,
@@ -10,10 +10,13 @@ import {
   StyledImage,
   StyledBox,
   StyledButton,
+  SignBoxStyle,
 } from "../styled-components/homePage/HomeStyles";
-import { Discover } from "../components/Discover";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const HomeComponent = () => {
+  const [openSignBox, setOpenSignBox] = useState(false);
   return (
     <>
       <Wrapper>
@@ -25,10 +28,16 @@ export const HomeComponent = () => {
             <NavStyled>Blogs</NavStyled>
             <NavStyled>Our services</NavStyled>
             <NavStyled>Our offers</NavStyled>
-            <StyledImage src={vectorImage}></StyledImage>
+
+            <StyledImage
+              onClick={() => setOpenSignBox(!openSignBox)}
+              src={vectorImage}
+            ></StyledImage>
           </NavBar>
         </Header>
+
         <StyledBox>
+          {openSignBox && <SignBox />}
           <p>Visit Mountains In</p>
           <span>ITALY</span>
           <StyledButton>See offer</StyledButton>
@@ -38,3 +47,17 @@ export const HomeComponent = () => {
     </>
   );
 };
+
+function SignBox() {
+  return (
+    <SignBoxStyle>
+      <Link to={"signIn"}>
+        <button>Sign in</button>
+      </Link>
+      <Link to={"registration"}>
+        <button>Sign up</button>
+      </Link>
+      <button>Sign out</button>
+    </SignBoxStyle>
+  );
+}
