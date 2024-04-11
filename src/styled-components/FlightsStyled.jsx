@@ -1,5 +1,4 @@
-import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const NavContainerStyled = styled.div`
   width: 950px;

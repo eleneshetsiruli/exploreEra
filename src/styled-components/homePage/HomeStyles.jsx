@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 import Background from "./homePngs/back.png";
 
 export const Wrapper = styled.section`

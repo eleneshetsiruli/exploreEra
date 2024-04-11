@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const FooterExlpore = styled.div`
   display: flex;

@@ -1,5 +1,4 @@
-import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const LeftSideInputs = styled.div`
   max-height: 1501px;
