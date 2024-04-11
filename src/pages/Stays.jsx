@@ -1,12 +1,12 @@
-import { RegisterHeaderStyle } from "../styled-components/RegistrationStyled";
-import { StyledButton, Title } from "../styled-components/homePage/HomeStyles";
+import { RegisterHeaderStyle } from "../homeFolder/RegistrationStyled";
+import { StyledButton, Title } from "../homeFolder/homePage/HomeStyles";
 import { NavLink, useNavigate } from "react-router-dom";
 import { LuUser2 } from "react-icons/lu";
 
 import {
   FlightInputsStyle,
   NavContainerStyled,
-} from "../styled-components/FlightsStyled";
+} from "../homeFolder/FlightsStyled";
 
 import {
   HotelItemStyle,
@@ -15,7 +15,7 @@ import {
   RightSideHotels,
   ShowButton,
   TextContent,
-} from "../styled-components/HotelsStyles";
+} from "../homeFolder/HotelsStyles";
 import { Footer } from "../components/Footer";
 import { useState } from "react";
 import { HotelsData } from "../Data";

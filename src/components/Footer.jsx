@@ -2,10 +2,11 @@ import {
   FooterContact,
   FooterExlpore,
   FooterNavstyle,
-} from "../styled-components/FooterStyles";
-import { FooterStyled, Title } from "../styled-components/homePage/HomeStyles";
+} from "../homeFolder/FooterStyles";
+
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa6";
 import arr from "../icons/arr.png";
+import { FooterStyled, Title } from "../homeFolder/homePage/HomeStyles";
 export const Footer = () => {
   return (
     <FooterStyled>

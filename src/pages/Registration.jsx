@@ -1,16 +1,18 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+
+import { Footer } from "../components/Footer";
+
+import { LuUser2 } from "react-icons/lu";
+import { MdOutlineAddAPhoto } from "react-icons/md";
 import {
   RegisterHeaderStyle,
   RegisterInputStyle,
   RegistrationForm,
   SubmitBtn,
   UserPicture,
-} from "../styled-components/RegistrationStyled";
-import { Footer } from "../components/Footer";
-import { Title } from "../styled-components/homePage/HomeStyles";
-import { LuUser2 } from "react-icons/lu";
-import { MdOutlineAddAPhoto } from "react-icons/md";
+} from "../homeFolder/RegistrationStyled";
+import { Title } from "../homeFolder/homePage/HomeStyles";
 
 export const Registration = () => {
   const {

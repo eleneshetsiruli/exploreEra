@@ -1,24 +1,17 @@
-import {
-  RegisterHeaderStyle,
-  SubBtn,
-  SubmitBtn,
-} from "../styled-components/RegistrationStyled";
-import {
-  FooterStyled,
-  StyledButton,
-  Title,
-} from "../styled-components/homePage/HomeStyles";
 import { LuUser2 } from "react-icons/lu";
 import Calendar from "react-calendar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FlyghtsData } from "../Data";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
 import line from "../icons/Line.png";
 import oneLine from "../icons/oneLine.png";
 import twoLine from "../icons/twoLine.png";
+
+import { Footer } from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 import {
   AirlineImg,
   BasicContent,
@@ -34,10 +27,10 @@ import {
   SidebarFirstCont,
   SimpleDivStyle,
   StopsStyled,
-} from "../styled-components/FlightsStyled";
+} from "../homeFolder/FlightsStyled";
+import { RegisterHeaderStyle } from "../homeFolder/RegistrationStyled";
+import { StyledButton, Title } from "../homeFolder/homePage/HomeStyles";
 import { RangeComponent } from "../components/RangeComponent";
-import { Footer } from "../components/Footer";
-import { useNavigate } from "react-router-dom";
 
 export const FlightsPage = () => {
   const [openCalendar, setOpenCalendar] = useState(false);

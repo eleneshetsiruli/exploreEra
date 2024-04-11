@@ -1,11 +1,11 @@
 import { Discover } from "../components/Discover";
 
+import { HeaderComp } from "../components/HeaderComp";
 import {
-  Wrapper,
   StyledBox,
   StyledButton,
-} from "../styled-components/homePage/HomeStyles";
-import { HeaderComp } from "../components/HeaderComp";
+  Wrapper,
+} from "../homeFolder/homePage/HomeStyles";
 
 export const HomeComponent = () => {
   return (

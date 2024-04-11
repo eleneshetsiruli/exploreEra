@@ -1,16 +1,16 @@
 import React, { useState } from "react";
+
+import { LuUser2 } from "react-icons/lu";
+import { Footer } from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 import {
   AuthBox,
   PrivacyBoxStyle,
   RegisterHeaderStyle,
   RegisterInputStyle,
   SubBtn,
-  SubmitBtn,
-} from "../styled-components/RegistrationStyled";
-import { Title } from "../styled-components/homePage/HomeStyles";
-import { LuUser2 } from "react-icons/lu";
-import { Footer } from "../components/Footer";
-import { useNavigate } from "react-router-dom";
+} from "../homeFolder/RegistrationStyled";
+import { Title } from "../homeFolder/homePage/HomeStyles";
 
 export const SignIn = () => {
   const [authData, setAuthData] = useState({ email: "", password: "" });

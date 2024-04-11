@@ -1,5 +1,5 @@
 import { BlogsData } from "../Data";
-import { BlogsStyle } from "../styled-components/homePage/HomeStyles";
+import { BlogsStyle } from "../homeFolder/homePage/HomeStyles";
 
 export const Blogs = () => {
   return (

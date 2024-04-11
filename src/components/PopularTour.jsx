@@ -1,10 +1,11 @@
 import { PopularToursData } from "../Data";
-import { PopularTourStyle } from "../styled-components/homePage/HomeStyles";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
+import { PopularTourStyle } from "../homeFolder/homePage/HomeStyles";
 
 export const PopularTour = () => {
   return (

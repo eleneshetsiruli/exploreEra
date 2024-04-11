@@ -1,15 +1,16 @@
 import { useState } from "react";
-import {
-  DiscoverContainer,
-  PopUpBoxStyle,
-  StyledDiscoverSection,
-} from "../styled-components/homePage/HomeStyles";
+
 import { WatchContent } from "./WatchContent";
 import { DiscoverData } from "../Data";
 import { PopularTour } from "./PopularTour";
 import { Blogs } from "./Blogs";
 import { BookInputs } from "./BookInputs";
 import { Footer } from "./Footer";
+import {
+  DiscoverContainer,
+  PopUpBoxStyle,
+  StyledDiscoverSection,
+} from "../homeFolder/homePage/HomeStyles";
 
 export const Discover = () => {
   const [openWindow, setOpenWindow] = useState(false);

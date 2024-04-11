@@ -1,17 +1,9 @@
 import { NavLink, useParams } from "react-router-dom";
-import { RegisterHeaderStyle } from "../styled-components/RegistrationStyled";
+
 import { LuUser2 } from "react-icons/lu";
-import { Title } from "../styled-components/homePage/HomeStyles";
+
 import { useNavigate } from "react-router-dom";
-import { NavContainerStyled } from "../styled-components/FlightsStyled";
-import {
-  HotelDiv,
-  HotelGridImg,
-  HotelimgStyles,
-  InputBoxStyle,
-  SearchDivs,
-  StyledGrid,
-} from "../styled-components/HotelsStyles";
+
 import { HotelsData } from "../Data";
 import map from "../icons/map.png";
 import hotel2 from "../icons/hotel2.png";
@@ -22,7 +14,18 @@ import img2 from "../icons/img2.png";
 import img3 from "../icons/img3.png";
 import img4 from "../icons/img4.png";
 import { Footer } from "../components/Footer";
-import { CgEnter } from "react-icons/cg";
+
+import {
+  HotelDiv,
+  HotelGridImg,
+  HotelimgStyles,
+  InputBoxStyle,
+  SearchDivs,
+  StyledGrid,
+} from "../homeFolder/HotelsStyles";
+import { RegisterHeaderStyle } from "../homeFolder/RegistrationStyled";
+import { Title } from "../homeFolder/homePage/HomeStyles";
+import { NavContainerStyled } from "../homeFolder/FlightsStyled";
 
 export const SingleHotelPage = () => {
   const params = useParams();

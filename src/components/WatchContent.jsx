@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
-import { WatchContainer } from "../styled-components/homePage/HomeStyles";
+
 import { BiSolidRightArrow } from "react-icons/bi";
 import { CiPause1 } from "react-icons/ci";
+import { WatchContainer } from "../homeFolder/homePage/HomeStyles";
 
 export const WatchContent = () => {
   const [isPlaying, setIsPlaying] = useState(false);

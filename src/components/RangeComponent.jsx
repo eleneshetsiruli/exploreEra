@@ -4,7 +4,7 @@ import {
   RangeBox,
   StyledRangeInputMax,
   StyledRangeInputMin,
-} from "../styled-components/FlightsStyled";
+} from "../homeFolder/FlightsStyled";
 
 export const RangeComponent = ({
   text,

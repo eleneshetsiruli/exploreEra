@@ -3,7 +3,7 @@ import {
   OrangeButton,
   SelectContent,
   SmallInputDivs,
-} from "../styled-components/homePage/HomeStyles";
+} from "../homeFolder/homePage/HomeStyles";
 
 export const BookInputs = () => {
   return (

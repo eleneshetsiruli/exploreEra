@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+
+import { Link } from "react-router-dom";
+import { FiUser } from "react-icons/fi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import {
   Burger,
   DropdownMenu,
@@ -7,10 +11,7 @@ import {
   NavStyled,
   SignBoxStyle,
   Title,
-} from "../styled-components/homePage/HomeStyles";
-import { Link } from "react-router-dom";
-import { FiUser } from "react-icons/fi";
-import { GiHamburgerMenu } from "react-icons/gi";
+} from "../homeFolder/homePage/HomeStyles";
 
 export const HeaderComp = () => {
   const [isSticky, setIsSticky] = useState(false);
