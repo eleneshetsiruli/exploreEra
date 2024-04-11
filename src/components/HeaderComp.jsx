@@ -36,7 +36,8 @@ export const HeaderComp = () => {
 
   return (
     <>
-      <div className={isSticky ? "sticky-header" : ""}>
+      {/* <div className={isSticky ? "sticky-header" : ""}> */}
+      <div>
         <Header>
           <Title>ExploreEra</Title>
 
