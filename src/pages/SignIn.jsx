@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import {
   AuthBox,
+  PrivacyBoxStyle,
   RegisterHeaderStyle,
   RegisterInputStyle,
+  SubBtn,
+  SubmitBtn,
 } from "../styled-components/RegistrationStyled";
 import { Title } from "../styled-components/homePage/HomeStyles";
 import { LuUser2 } from "react-icons/lu";
@@ -11,38 +14,53 @@ import { useNavigate } from "react-router-dom";
 
 export const SignIn = () => {
   const [authData, setAuthData] = useState({ email: "", password: "" });
-  const [validate, setValidate] = useState(true);
+  const [validate, setValidate] = useState(false);
+  const [open, SetOpen] = useState(false);
+  const [agree, setAgree] = useState(false);
   const storedData = JSON.parse(localStorage.getItem("unilabAuth"));
   const navigate = useNavigate();
 
   console.log(storedData);
+
+  function handleGoHome() {
+    navigate("/");
+  }
+
   function handleSignIn() {
     if (
+      agree &&
       authData.email === storedData.email &&
       authData.password === storedData.password
     ) {
       setValidate(true);
-      navigate("/");
+      navigate("/flights");
     } else {
       setValidate(false);
     }
   }
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "#e1e1e4",
-        gap: "60px",
-      }}
-    >
+    <>
       <RegisterHeaderStyle>
-        <Title>ExploreEra</Title>
+        <Title onClick={handleGoHome}>ExploreEra</Title>
         <LuUser2 />
       </RegisterHeaderStyle>
-      <AuthBox>
-        <form onSubmit={(ev) => ev.preventDefault()}>
-          <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: "#e1e1e4",
+          gap: "60px",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "50px",
+          position: "relative",
+        }}
+      >
+        <AuthBox>
+          <form
+            style={{ display: "flex", flexDirection: "column", gap: "20px" }}
+            onSubmit={(ev) => ev.preventDefault()}
+          >
             <small>Email</small>
             <RegisterInputStyle
               required
@@ -50,8 +68,6 @@ export const SignIn = () => {
                 setAuthData({ ...authData, email: ev.target.value })
               }
             />
-          </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
             <small>Password</small>
             <RegisterInputStyle
               required
@@ -60,35 +76,57 @@ export const SignIn = () => {
               }
               type="password"
             />
-          </div>
 
-          {validate ? (
-            ""
-          ) : (
-            <p style={{ color: "red" }}>Email or Password are incorrect</p>
-          )}
-          <button onClick={handleSignIn}>Submit</button>
-        </form>
-        <div>
-          <div>facebook</div>
-          <div>apple</div>
-          <div>gmail</div>
-          <div>mail</div>
-        </div>
-        <p>
-          By signing in or creating an account,you agree with our terms &
-          conditions and provacy
-        </p>
-      </AuthBox>
-      <Footer />
-    </div>
+            {validate ? (
+              ""
+            ) : (
+              <p style={{ color: "red" }}>Email or Password are incorrect</p>
+            )}
+
+            <SubBtn onClick={handleSignIn}>Submit</SubBtn>
+          </form>
+
+          <small>
+            By signing in or creating an account,you agree with our terms &
+            conditions and provacy
+          </small>
+          <span
+            onClick={() => SetOpen(true)}
+            style={{
+              color: "#ff6700",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Terms & conditions and Privacy policy
+          </span>
+        </AuthBox>
+
+        {open && <PrivacyBox SetOpen={SetOpen} setAgree={setAgree} />}
+        <Footer />
+      </div>
+    </>
   );
 };
 
-function PrivacyBox() {
+function PrivacyBox({ SetOpen, setAgree }) {
+  function handleClick() {
+    SetOpen(false);
+    setAgree(true);
+  }
   return (
-    <div>
-      <h1></h1>
-    </div>
+    <PrivacyBoxStyle>
+      <h1>Terms and conditions</h1>
+      <p>
+        Before you use our website or services, please carefully read the
+        following Terms and Conditions. By accessing or using our platform, you
+        agree to comply with and be bound by these terms. If you do not agree
+        with any part of these terms, please do not use our services. Your
+        privacy is important to us. Please review our Privacy Policy to
+        understand how we collect, use, and disclose information about you. By
+        using our services, you consent to our privacy practices.
+      </p>
+      <SubBtn onClick={handleClick}>I agree</SubBtn>
+    </PrivacyBoxStyle>
   );
 }

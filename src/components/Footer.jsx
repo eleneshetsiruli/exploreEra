@@ -15,9 +15,9 @@ export const Footer = () => {
         <span>Follow us</span>
 
         <div>
-          <FaInstagram style={{ height: "50px", width: "50px" }} />
-          <FaFacebook style={{ height: "50px", width: "50px" }} />
-          <FaTwitter style={{ height: "50px", width: "50px" }} />
+          <FaInstagram style={{ height: "30px", width: "50px" }} />
+          <FaFacebook style={{ height: "30px", width: "50px" }} />
+          <FaTwitter style={{ height: "30px", width: "50px" }} />
         </div>
       </FooterExlpore>
 

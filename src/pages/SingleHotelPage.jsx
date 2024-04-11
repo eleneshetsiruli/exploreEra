@@ -5,7 +5,10 @@ import { Title } from "../styled-components/homePage/HomeStyles";
 import { useNavigate } from "react-router-dom";
 import { NavContainerStyled } from "../styled-components/FlightsStyled";
 import {
+  HotelDiv,
+  HotelGridImg,
   HotelimgStyles,
+  InputBoxStyle,
   SearchDivs,
   StyledGrid,
 } from "../styled-components/HotelsStyles";
@@ -19,6 +22,7 @@ import img2 from "../icons/img2.png";
 import img3 from "../icons/img3.png";
 import img4 from "../icons/img4.png";
 import { Footer } from "../components/Footer";
+import { CgEnter } from "react-icons/cg";
 
 export const SingleHotelPage = () => {
   const params = useParams();
@@ -37,9 +41,7 @@ export const SingleHotelPage = () => {
     "Private gym",
   ];
   const filteterdData = HotelsData.filter((el) => el.id == params.id);
-  console.log(filteterdData);
 
-  console.log(params.id);
   return (
     <div
       style={{
@@ -61,7 +63,7 @@ export const SingleHotelPage = () => {
         <NavLink to={"/attractions"}>Attractions</NavLink>
       </NavContainerStyled>
 
-      <div style={{ display: "flex", gap: "20px" }}>
+      <HotelDiv>
         <div
           style={{
             display: "flex",
@@ -70,13 +72,7 @@ export const SingleHotelPage = () => {
             gap: "20px",
           }}
         >
-          <div
-            style={{
-              background: "white",
-              borderRadius: "20px",
-              padding: "20px",
-            }}
-          >
+          <InputBoxStyle InputBoxStyle>
             <SimpleInputBox input="Auckland,New Zaaland" title="Destination" />
             <SimpleInputBox
               input="Auckland,New Zaaland"
@@ -87,7 +83,7 @@ export const SingleHotelPage = () => {
               title="Check-out date"
             />
             <SimpleInputBox input="Auckland,New Zaaland" title="Persons" />
-          </div>
+          </InputBoxStyle>
 
           <img src={map} alt="img" />
 
@@ -109,7 +105,7 @@ export const SingleHotelPage = () => {
             <SimpleHotel data={el} key={el.id} />
           ))}
         </div>
-      </div>
+      </HotelDiv>
       <Footer />
     </div>
   );
@@ -144,19 +140,7 @@ function SimpleHotel({ data }) {
       </div>
       <div>
         <StyledGrid>
-          <img
-            style={{
-              height: "400px",
-              width: "650px",
-
-              gridColumnStart: 1,
-              gridColumnEnd: 3,
-              gridRowStart: 1,
-              gridRowEnd: 3,
-            }}
-            src={hotel}
-            alt="img"
-          />
+          <HotelGridImg src={hotel} alt="img" />
           <img
             style={{ width: "300px", height: "190px" }}
             src={hotel2}

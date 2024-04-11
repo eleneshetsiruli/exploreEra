@@ -1,4 +1,8 @@
-import { RegisterHeaderStyle } from "../styled-components/RegistrationStyled";
+import {
+  RegisterHeaderStyle,
+  SubBtn,
+  SubmitBtn,
+} from "../styled-components/RegistrationStyled";
 import {
   FooterStyled,
   StyledButton,
@@ -16,8 +20,10 @@ import line from "../icons/Line.png";
 import oneLine from "../icons/oneLine.png";
 import twoLine from "../icons/twoLine.png";
 import {
+  AirlineImg,
   BasicContent,
   CalendarStyle,
+  FilterTabBt,
   FlexBoxRow,
   FlightInputsStyle,
   NavContainerStyled,
@@ -291,6 +297,7 @@ export const FlightsPage = () => {
         {/* RIGHT BASIC CONTENT */}
 
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          <FilterTabBt>Filters</FilterTabBt>
           {filterHour.slice(0, displayedItemCount).map((el) => (
             <AirlineItem data={el} key={el.id} />
           ))}
@@ -316,7 +323,7 @@ function AirlineItem({ data }) {
           alignItems: "center",
         }}
       >
-        <img src={data.url} alt="image" />
+        <AirlineImg src={data.url} alt="image" />
         <p>{data.title}</p>
       </div>
       <div>

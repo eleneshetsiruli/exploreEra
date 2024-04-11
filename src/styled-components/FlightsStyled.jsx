@@ -9,6 +9,12 @@ export const NavContainerStyled = styled.div`
   gap: 40px;
   margin-left: 170px;
 
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 300px;
+    margin-left: 10px;
+    gap: 20px;
+  }
+
   a {
     text-decoration: none;
     width: 140px;
@@ -38,6 +44,10 @@ export const FlightInputsStyle = styled.div`
     align-items: center;
     padding: 30px;
     gap: 10px;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      width: 130px;
+      padding: 1px;
+    }
   }
 `;
 
@@ -50,6 +60,11 @@ export const CalendarStyle = styled.div`
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 5px;
   position: absolute;
+
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 200px;
+    left: 100px;
+  }
 
   .react-calendar__tile--active {
     background-color: #ff6700 !important;
@@ -84,8 +99,20 @@ export const CalendarStyle = styled.div`
 
 export const SimpleDivStyle = styled.div`
   display: flex;
-  padding: 100px;
+  padding: 15px;
   gap: 20px;
+`;
+
+export const FilterTabBt = styled.button`
+  width: 780px;
+  height: 50px;
+  color: white;
+  background-color: #ff6700;
+  border-radius: 10px;
+  border: none;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 350px;
+  }
 `;
 
 export const SideBarStyled = styled.div`
@@ -94,6 +121,13 @@ export const SideBarStyled = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const SidebarFirstCont = styled.div`
@@ -230,8 +264,19 @@ export const BasicContent = styled.div`
   justify-content: center;
   align-items: center;
   gap: 68px;
-
   padding: 36px;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    background-color: #ff8c3e;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2px;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 780px;
+  }
+
   :first-child img {
     width: 70px;
   }
@@ -251,4 +296,11 @@ export const ShowResultsButton = styled.button`
   color: white;
   border-radius: 20px;
   border: none;
+`;
+export const AirlineImg = styled.img`
+  width: 10px;
+
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    display: none;
+  }
 `;

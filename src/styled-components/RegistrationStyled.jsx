@@ -29,19 +29,24 @@ export const UserPicture = styled.label`
   align-items: center;
   border-radius: 50%;
   align-self: flex-start;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    margin-left: 50px;
+  }
 `;
 
 export const AuthBox = styled.div`
   width: 540px;
   height: 555px;
   background-color: #ffffff;
-  border-radius: 90px;
-  align-self: center;
+  border-radius: 20px;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 
-  input {
-    width: 100px;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 340px;
   }
 `;
 
@@ -52,6 +57,10 @@ export const RegisterInputStyle = styled.input`
   border-radius: 10px;
   color: gray;
   padding-left: 20px;
+
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 300px;
+  }
 `;
 
 export const SubmitBtn = styled.input`
@@ -60,4 +69,41 @@ export const SubmitBtn = styled.input`
   color: white;
   background-color: #ff6700;
   border-radius: 10px;
+
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 200px;
+  }
+`;
+export const SubBtn = styled.button`
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ff6700;
+  color: white;
+  border: none;
+
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 200px;
+  }
+  &:hover {
+    background-color: #b74b03;
+  }
+`;
+
+export const PrivacyBoxStyle = styled.div`
+  width: 600px;
+  height: 610px;
+  border-radius: 15px;
+  background-color: white;
+  z-index: 10;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 200px;
+  }
 `;
