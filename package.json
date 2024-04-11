@@ -26,8 +26,8 @@
     "react-slider": "^2.0.6",
     "react-sticky": "^6.0.3",
     "react-sticky-box": "^2.0.5",
-    "react-sticky-header": "^0.2.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
