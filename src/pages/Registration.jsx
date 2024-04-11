@@ -2,7 +2,9 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import {
   RegisterHeaderStyle,
+  RegisterInputStyle,
   RegistrationForm,
+  SubmitBtn,
   UserPicture,
 } from "../styled-components/RegistrationStyled";
 import { Footer } from "../components/Footer";
@@ -29,105 +31,140 @@ export const Registration = () => {
     );
     navigate("/signin");
   };
-
+  function handleGoHome() {
+    navigate("/");
+  }
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        flexDirection: "column",
-        height: "100vh",
-      }}
-    >
+    <>
       <RegisterHeaderStyle>
-        <Title>ExploreEra</Title>
+        <Title onClick={handleGoHome}>ExploreEra</Title>
         <LuUser2 />
       </RegisterHeaderStyle>
-      <RegistrationForm onSubmit={handleSubmit(onSubmit)}>
-        <input
-          {...register("firstName", {
-            required: "First name is required",
-            pattern: {
-              value: /^[A-Za-z]+$/i,
-              message: "Invalid first name",
-            },
-          })}
-          placeholder="First name"
-        />
-        {errors.firstName && <span>{errors.firstName.message}</span>}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          background: "#edebeb",
+          alignItems: "center",
+        }}
+      >
+        <RegistrationForm onSubmit={handleSubmit(onSubmit)}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <small>First Name</small>
 
-        <input
-          {...register("lastName", {
-            required: "Last name is required",
-            pattern: {
-              value: /^[A-Za-z]+$/i,
-              message: "Invalid LastName",
-            },
-          })}
-          placeholder="lastName"
-        />
-        {errors.lastName && <span>{errors.lastName.message}</span>}
+            <RegisterInputStyle
+              {...register("firstName", {
+                required: "First name is required",
+                pattern: {
+                  value: /^[A-Za-z]+$/i,
+                  message: "Invalid first name",
+                },
+              })}
+              placeholder="Enter your First name"
+            />
+            {errors.firstName && (
+              <span style={{ color: "red" }}>{errors.firstName.message}</span>
+            )}
+          </div>
 
-        <input
-          {...register("Email", {
-            required: "Email is required",
-            pattern: {
-              value: /\S+@\S+\.\S+/,
-              message: "Invalid email address",
-            },
-          })}
-          placeholder="Email"
-        />
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <small>Last Name</small>
+            <RegisterInputStyle
+              {...register("lastName", {
+                required: "Last name is required",
+                pattern: {
+                  value: /^[A-Za-z]+$/i,
+                  message: "Invalid LastName",
+                },
+              })}
+              placeholder="Enter your lastName"
+            />
+            {errors.lastName && (
+              <span style={{ color: "red" }}>{errors.lastName.message}</span>
+            )}
+          </div>
 
-        {errors.Email && <span>{errors.Email.message}</span>}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <small>Email</small>
+            <RegisterInputStyle
+              {...register("Email", {
+                required: "Email is required",
+                pattern: {
+                  value: /\S+@\S+\.\S+/,
+                  message: "Invalid email address",
+                },
+              })}
+              placeholder="Enter your Email address"
+            />
 
-        <input
-          type="password"
-          {...register("Password", {
-            required: "Password is required",
-            minLength: {
-              value: 6,
-              message: "Password must be at least 6 characters",
-            },
-          })}
-          placeholder="Password"
-        />
+            {errors.Email && (
+              <span style={{ color: "red" }}>{errors.Email.message}</span>
+            )}
+          </div>
 
-        {errors.Password && <span>{errors.Password.message}</span>}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <small>Password</small>
+            <RegisterInputStyle
+              type="password"
+              {...register("Password", {
+                required: "Password is required",
+                minLength: {
+                  value: 6,
+                  message: "Password must be at least 6 characters",
+                },
+              })}
+              placeholder="Enter your Password"
+            />
 
-        <input
-          type="password"
-          {...register("ConfirmPassword", {
-            required: "Please confirm your password",
-            validate: (value) =>
-              value === watch("Password") || "Passwords do not match",
-          })}
-          placeholder="Re-enter your password"
-        />
+            {errors.Password && (
+              <span style={{ color: "red" }}>{errors.Password.message}</span>
+            )}
+          </div>
 
-        {errors.ConfirmPassword && (
-          <span>{errors.ConfirmPassword.message}</span>
-        )}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <small>Confirm the password</small>
+            <RegisterInputStyle
+              type="password"
+              {...register("ConfirmPassword", {
+                required: "Please confirm your password",
+                validate: (value) =>
+                  value === watch("Password") || "Passwords do not match",
+              })}
+              placeholder="Re-enter your password"
+            ></RegisterInputStyle>
 
-        {errors.picture && <span>please choose your picture</span>}
+            {errors.ConfirmPassword && (
+              <span style={{ color: "red" }}>
+                {errors.ConfirmPassword.message}
+              </span>
+            )}
+          </div>
 
-        <UserPicture htmlFor="file-upload">
-          <MdOutlineAddAPhoto />
-        </UserPicture>
+          {errors.picture && (
+            <span style={{ color: "red" }}>please choose your picture</span>
+          )}
 
-        <input
-          id="file-upload"
-          type="file"
-          {...register("picture", {
-            required: true,
-            message: "please choose your picture",
-          })}
-          style={{ display: "none" }}
-        />
+          <UserPicture htmlFor="file-upload">
+            <MdOutlineAddAPhoto
+              style={{ height: "50px", width: "50px", color: "#FF6700" }}
+            />
+          </UserPicture>
 
-        <input type="submit" />
-      </RegistrationForm>
-      <Footer />
-    </div>
+          <input
+            id="file-upload"
+            type="file"
+            {...register("picture", {
+              required: true,
+              message: "please choose your picture",
+            })}
+            style={{ display: "none" }}
+          />
+
+          <SubmitBtn type="submit" />
+        </RegistrationForm>
+        <Footer />
+      </div>
+    </>
   );
 };

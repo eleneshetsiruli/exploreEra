@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   AuthBox,
   RegisterHeaderStyle,
+  RegisterInputStyle,
 } from "../styled-components/RegistrationStyled";
 import { Title } from "../styled-components/homePage/HomeStyles";
 import { LuUser2 } from "react-icons/lu";
@@ -41,19 +42,25 @@ export const SignIn = () => {
       </RegisterHeaderStyle>
       <AuthBox>
         <form onSubmit={(ev) => ev.preventDefault()}>
-          <input
-            required
-            onChange={(ev) =>
-              setAuthData({ ...authData, email: ev.target.value })
-            }
-          />
-          <input
-            required
-            onChange={(ev) =>
-              setAuthData({ ...authData, password: ev.target.value })
-            }
-            type="password"
-          />
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <small>Email</small>
+            <RegisterInputStyle
+              required
+              onChange={(ev) =>
+                setAuthData({ ...authData, email: ev.target.value })
+              }
+            />
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <small>Password</small>
+            <RegisterInputStyle
+              required
+              onChange={(ev) =>
+                setAuthData({ ...authData, password: ev.target.value })
+              }
+              type="password"
+            />
+          </div>
 
           {validate ? (
             ""

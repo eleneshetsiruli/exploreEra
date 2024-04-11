@@ -1,24 +1,47 @@
-import { BookInputStyled } from "../styled-components/homePage/HomeStyles";
+import {
+  BookInputStyled,
+  OrangeButton,
+  SelectContent,
+  SmallInputDivs,
+} from "../styled-components/homePage/HomeStyles";
 
 export const BookInputs = () => {
   return (
     <BookInputStyled>
-      <h1>Ready To Book A Trip?</h1>
+      <p>Ready To Book A Trip?</p>
       <div>
-        <select>
-          <option>Your starting location</option>
-        </select>
-        <select>
-          <option>Choose date</option>
-        </select>
-        <select>
-          <option>Choose a tour offer</option>
-        </select>
-        <select>
-          <option>Persons</option>
-        </select>
+        <SmallInputDivs>
+          <SelectContent>
+            <option>Your starting location</option>
+            <option>Usa</option>
+            <option>Georgia</option>
+            <option>Rome</option>
+            <option>Italy</option>
+            <option>Prague</option>
+          </SelectContent>
+
+          <SelectContent>
+            <option>Choose date</option>
+            <option>12:04:2024</option>
+            <option>13:04:2024</option>
+          </SelectContent>
+        </SmallInputDivs>
+
+        <SmallInputDivs>
+          <SelectContent>
+            <option>Choose a tour offer</option>
+            <option>Italy tour</option>
+            <option>Rome tour</option>
+          </SelectContent>
+
+          <SelectContent>
+            <option>Persons</option>
+            <option>2</option>
+            <option>3</option>
+          </SelectContent>
+        </SmallInputDivs>
       </div>
-      <button>Book Now</button>
+      <OrangeButton>Book Now</OrangeButton>
     </BookInputStyled>
   );
 };

@@ -4,7 +4,7 @@ import { BlogsStyle } from "../styled-components/homePage/HomeStyles";
 export const Blogs = () => {
   return (
     <>
-      <h1 style={{ marginTop: 30 }}>Blogs</h1>
+      <h1>Blogs</h1>
       <BlogsStyle>
         {BlogsData.map((el) => (
           <div key={el.id}>

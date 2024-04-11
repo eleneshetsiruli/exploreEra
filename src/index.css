@@ -2,10 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 #root {
   display: flex;
   flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+a.active {
+  background-color: #ff6700;
+  color: white !important;
+}
+.sticky-header {
+  position: fixed;
+  color: #424244;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eae9e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  h1,
+  a {
+    color: #424244;
+  }
+}
+.black {
+  color: #424244;
+}
+.user:hover {
+  color: #c85100;
 }

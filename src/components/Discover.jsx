@@ -24,12 +24,15 @@ export const Discover = () => {
           destination selection, flight and accommodation bookings, and
           customized itineraries to individual preferences.
         </p>
+
         <span onClick={() => setOpenWindow(true)}>see all</span>
+
         <DiscoverContainer>
           {DiscoverData.slice(0, 4).map((element) => (
             <DiscoverItem key={element.id} data={element} />
           ))}
         </DiscoverContainer>
+
         {openWindow && (
           <PopUpBoxStyle>
             {DiscoverData.map((el) => (
@@ -38,12 +41,16 @@ export const Discover = () => {
             <button onClick={() => setOpenWindow(false)}>&times;</button>
           </PopUpBoxStyle>
         )}
+
         <WatchContent />
+
         <PopularTour />
+
         <Blogs />
-        <BookInputs />
-        <Footer />
       </StyledDiscoverSection>
+
+      <BookInputs />
+      <Footer />
     </>
   );
 };

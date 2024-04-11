@@ -1,38 +1,45 @@
+import {
+  FooterContact,
+  FooterExlpore,
+  FooterNavstyle,
+} from "../styled-components/FooterStyles";
 import { FooterStyled, Title } from "../styled-components/homePage/HomeStyles";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa6";
+import arr from "../icons/arr.png";
 export const Footer = () => {
   return (
     <FooterStyled>
-      <div>
+      <FooterExlpore>
         <Title>ExploreEra</Title>
         <p>Travel agency which helps you to plan your perfect holidays</p>
-        <p>Follow us</p>
+        <span>Follow us</span>
 
         <div>
-          <FaInstagram />
-          <FaFacebook />
-          <FaTwitter />
+          <FaInstagram style={{ height: "50px", width: "50px" }} />
+          <FaFacebook style={{ height: "50px", width: "50px" }} />
+          <FaTwitter style={{ height: "50px", width: "50px" }} />
         </div>
-      </div>
+      </FooterExlpore>
 
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <h3>Links</h3>
+      <FooterNavstyle style={{ display: "flex", flexDirection: "column" }}>
+        <p>Links</p>
         <a href="#">Home</a>
         <a href="#">About us</a>
         <a href="#">Blogs</a>
         <a href="#">Our services</a>
         <a href="#">Our offers</a>
-      </div>
+      </FooterNavstyle>
 
-      <div>
+      <FooterContact>
         <h3>Contact us</h3>
         <p>exploreera@gmail.com</p>
         <p>555111222</p>
         <h3>Subscribe news</h3>
-        <button>Email icnon</button>
-      </div>
-
-      <h5>Copyright 2024</h5>
+        <button>
+          <span>Email</span>
+          <img src={arr} alt="" />
+        </button>
+      </FooterContact>
     </FooterStyled>
   );
 };

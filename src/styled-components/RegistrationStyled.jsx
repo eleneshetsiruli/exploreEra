@@ -4,6 +4,11 @@ export const RegistrationForm = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 540px;
+  border-radius: 10px;
+  padding: 50px 70px;
+  background-color: #ffffff;
+  gap: 20px;
 `;
 
 export const RegisterHeaderStyle = styled.header`
@@ -23,10 +28,7 @@ export const UserPicture = styled.label`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-
-  svg {
-    width: 100px;
-  }
+  align-self: flex-start;
 `;
 
 export const AuthBox = styled.div`
@@ -41,4 +43,21 @@ export const AuthBox = styled.div`
   input {
     width: 100px;
   }
+`;
+
+export const RegisterInputStyle = styled.input`
+  width: 400px;
+  height: 50px;
+  border: 1px solid #ff6700;
+  border-radius: 10px;
+  color: gray;
+  padding-left: 20px;
+`;
+
+export const SubmitBtn = styled.input`
+  width: 400px;
+  height: 50px;
+  color: white;
+  background-color: #ff6700;
+  border-radius: 10px;
 `;
