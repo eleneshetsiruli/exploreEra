@@ -157,7 +157,7 @@ export const HotelGridImg = styled.img`
     height: 400px;
   }
 `;
-export const InputBoxStyle = styled.div`
+export const LittleBoxStyle = styled.div`
   background: white;
   border-radius: 20px;
   padding: 20px;

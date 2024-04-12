@@ -1,5 +1,9 @@
 import { RegisterHeaderStyle } from "../homeFolder/RegistrationStyled";
-import { StyledButton, Title } from "../homeFolder/homePage/HomeStyles";
+import {
+  SmallInputDivs,
+  StyledButton,
+  Title,
+} from "../homeFolder/homePage/HomeStyles";
 import { NavLink, useNavigate } from "react-router-dom";
 import { LuUser2 } from "react-icons/lu";
 
@@ -68,11 +72,11 @@ export const Stays = () => {
             value1="Hotel"
             value2="Apartment"
             value3="Villa"
-            value4="Guest house"
+            value4="Guest
+            house"
             value5="Resort"
             title="Property type"
-          />
-
+          ></InputBox>
           <InputBox
             onChange={handleChange}
             value1="5 Stars"
@@ -81,8 +85,9 @@ export const Stays = () => {
             value4="2 Stars"
             value5="1 Stars"
             title="Property rating"
-          />
-
+          >
+            /
+          </InputBox>
           <InputBox
             value1="Wifi"
             value2="Parking"
@@ -90,8 +95,7 @@ export const Stays = () => {
             value4="Fitness center"
             value5="Swimming pool"
             title="Facilities"
-          />
-
+          ></InputBox>
           <InputBox
             value1="Balcony"
             value2="TV"
@@ -99,7 +103,8 @@ export const Stays = () => {
             value4="Air conditioning"
             value5="Washing machine"
             title="Room facilities"
-          />
+          ></InputBox>
+          /
         </LeftSideInputs>
         <RightSideHotels>
           {filtered.map((el) => (

@@ -19,7 +19,7 @@ import {
   HotelDiv,
   HotelGridImg,
   HotelimgStyles,
-  InputBoxStyle,
+  InputBoxStyles,
   SearchDivs,
   StyledGrid,
 } from "../homeFolder/HotelsStyles";
@@ -75,7 +75,7 @@ export const SingleHotelPage = () => {
             gap: "20px",
           }}
         >
-          <InputBoxStyle>
+          <InputBoxStyles>
             <SimpleInputBox input="Auckland,New Zaaland" title="Destination" />
             <SimpleInputBox
               input="Auckland,New Zaaland"
@@ -86,7 +86,7 @@ export const SingleHotelPage = () => {
               title="Check-out date"
             />
             <SimpleInputBox input="Auckland,New Zaaland" title="Persons" />
-          </InputBoxStyle>
+          </InputBoxStyles>
 
           <img src={map} alt="img" />
 
