@@ -75,7 +75,7 @@ export const SingleHotelPage = () => {
             gap: "20px",
           }}
         >
-          <InputBoxStyle InputBoxStyle>
+          <InputBoxStyle>
             <SimpleInputBox input="Auckland,New Zaaland" title="Destination" />
             <SimpleInputBox
               input="Auckland,New Zaaland"
@@ -90,7 +90,7 @@ export const SingleHotelPage = () => {
 
           <img src={map} alt="img" />
 
-          <al
+          <div
             style={{
               background: "white",
               width: "380px",
@@ -101,7 +101,7 @@ export const SingleHotelPage = () => {
             {FacilitiesData.map((el, i) => (
               <li key={i}>{el}</li>
             ))}
-          </al>
+          </div>
         </div>
         <div>
           {filteterdData.map((el) => (
