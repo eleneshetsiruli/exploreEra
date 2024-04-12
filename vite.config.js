@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ["styled-components"], // Add any other external dependencies here
+      external: ["styled-components"],
     },
   },
 });

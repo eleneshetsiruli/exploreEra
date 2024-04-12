@@ -101,7 +101,7 @@ export const PopularToursData = [
   },
   {
     id: 7,
-    url: "https://assets.cntraveller.in/photos/622b3fdc652e69e3c9cd5372/16:9/w_1024%2Cc_limit/caleb-russell-JmuyB_LibRo-unsplash.jpg",
+    url: "https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg",
     title: "Sydney, Australia",
     text: "2 adults 7 days",
     price: "3800$",
