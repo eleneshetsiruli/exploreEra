@@ -50,52 +50,6 @@ export const FlightInputsStyle = styled.div`
   }
 `;
 
-export const CalendarStyle = styled.div`
-  width: 200px;
-  background-color: #cdcdcd;
-  margin-top: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  border-radius: 5px;
-  position: absolute;
-
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    width: 200px;
-    left: 100px;
-  }
-
-  .react-calendar__tile--active {
-    background-color: #ff6700 !important;
-    color: #fff !important;
-  }
-  .react-calendar__navigation {
-    display: flex;
-  }
-
-  .react-calendar__navigation__label {
-    font-size: 18px;
-    color: #d6a07c;
-  }
-
-  .react-calendar__navigation button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: #333;
-    padding: 5px;
-  }
-
-  .react-calendar__tile {
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 30px;
-    height: 30px;
-  }
-`;
-
 export const SimpleDivStyle = styled.div`
   display: flex;
   padding: 15px;

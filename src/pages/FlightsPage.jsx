@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 import {
   AirlineImg,
   BasicContent,
-  CalendarStyle,
   FilterTabBt,
   FlexBoxRow,
   FlightInputsStyle,
@@ -78,10 +77,10 @@ export const FlightsPage = () => {
     };
 
     return (
-      <CalendarStyle>
+      <div className="CalendarStyle">
         <Calendar onChange={handleChange} value={date} />
         <p>Selected Date: {date.toLocaleDateString()}</p>
-      </CalendarStyle>
+      </div>
     );
   };
 
