@@ -16,7 +16,7 @@ export const LeftSideInputs = styled.div`
 export const InputBoxStyles = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   margin: 30px;
   width: 380px;
   background-color: white;
